@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <link href="../global.css" rel="stylesheet" />
+    <link href="startgame.css" rel="stylesheet" />
+    <title>TetringGame</title>
+  </head>
+  <body>
+    <div class="gameinfo">
+      <div id="round">Round 1</div>
+      <div id="targetScore-text">목표 점수</div>
+      <div id="targetScore">1200</div>
+      <div id="linecombo">라인점수 : <span id="lineScore"></span>  콤보점수 : <span id="comboScore"></span></div>
+      <div id="score-text">점수</div>
+      <div id="score"><span id="finalScore">0</span></div>
+      <div id="gold">보유 금액 : 5$</div>
+      <div id="line"></div>
+      <div class="relics">
+        <div id="relic"><img src="../img/block1.png" class="relic"></div>
+        <div id="relic"><img src="../img/block2.png" class="relic"></div>
+        <div id="relic"></div>
+        <div id="relic"></div>
+        <div id="relic"></div>
+      </div>
+    </div>
+    <!-- 캔버스 API 모르겠으면 아래 참조
+        https://developer.mozilla.org/ko/docs/Web/API/Canvas_API/Tutorial/Basic_usage -->
+    <canvas id="hold" width="160" height="160"></canvas>
+    <canvas id="tetris" width="480" height="800"></canvas>
+    <canvas id="next" width="160" height="480"></canvas>
+    <script src="artifacts.js"></script>
+    <script src="draw.js"></script>
+    <script src="gameInit.js"></script>
+    <script src="playerAction.js"></script>
+    <script src="gameLogic.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
