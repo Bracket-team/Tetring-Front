@@ -1,22 +1,24 @@
-.logo {
-    position: relative;
-    top: 100px;
+body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+.logo {
 }
 img.logo {
-    width: 100%;
+    width: 80vh;
 }
 
 .main {
-    position: relative;
-    top: 270px;
-    left: 655px;
-    width: 600px;
-    height: 300px;
-    border-radius: 20px;
+    width: 70vh;
+    height: 40vh;
+    border-radius: 2vh;
     background-color: rgba(104, 104, 104, 0.80);
-    box-shadow: 1px 1px 3px 1px #37383a inset;
+    box-shadow: 0.1vh 0.1vh 0.3vh 0.1vh #37383a inset;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -30,19 +32,19 @@ a:visited {
 }
 
 a.button {
-    font-size: 30px;
+    font-size: 4vh;
     position: relative;
     float: left;
-    width: 400px;
-    height: 50px;
-    padding: 0;
-    margin: 10px 20px 10px 0;
-    font-weight: 600;
+    width: 40vh;
+    height: 6vh;
+    padding: 0vh;
+    margin: 1vh 2vh 1vh 0;
+    font-weight: 70vh;
     text-align: center;
-    line-height: 50px;
+    line-height: 5vh;
     color: #000000;
-    border-radius: 5px;
-    transition: all 0.2s ;
+    border-radius: 0.5vh;
+    transition: all 0.2vh ;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -53,14 +55,14 @@ a.button {
 }
 
 .btnMain.btnPush {
-    box-shadow: 0px 5px 0px 0px #525755;
+    box-shadow: 0vh 0.5vh 0vh 0vh #525755;
 }
 
 .btnPush:hover {
-    margin-top: 15px;
-    margin-bottom: 5px;
+    margin-top: 1.5vh;
+    margin-bottom: 0.5vh;
 }
 
 .btnMain.btnPush:hover {
-    box-shadow: 0px 0px 0px 0px #525755;
+    box-shadow: 0vh 0vh 0vh 0vh #525755;
 }
