@@ -21,7 +21,6 @@ shuffleArray(pieces);
 //나중에 추가해줘야 할 것 1. 유물 목록들 2. 블록들 3. 머니레벨 4. 머니
 let moneyLevel = 3; //머니 레벨
 let money = 21;
-acquireArtifact(23);
 console.log(artifacts);
 
 function update(time = 0) {

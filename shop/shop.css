@@ -54,7 +54,64 @@ body {
     border-radius: 2.1vh;
     background: #233B52;
     box-shadow: 1.0vh 1.0vh 0.4vh 0vh rgba(0, 0, 0, 0.56);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
+
+#relic {
+    width: 5vw;
+    height: 10vh;
+    border-radius: 1.1vh;
+    background: #1e3041;
+    box-shadow: 0.4vh 0.4vh 0.4vh 0vh #131f2a inset;
+}
+#relic1 {
+    width: 5vw;
+    height: 10vh;
+    border-radius: 1.1vh;
+    background: #1e3041;
+    box-shadow: 0.4vh 0.4vh 0.4vh 0vh #131f2a inset;
+}
+#relic2 {
+    width: 5vw;
+    height: 10vh;
+    border-radius: 1.1vh;
+    background: #1e3041;
+    box-shadow: 0.4vh 0.4vh 0.4vh 0vh #131f2a inset;
+}
+#relic3 {
+    width: 5vw;
+    height: 10vh;
+    border-radius: 1.1vh;
+    background: #1e3041;
+    box-shadow: 0.4vh 0.4vh 0.4vh 0vh #131f2a inset;
+}
+#relic4 {
+    width: 5vw;
+    height: 10vh;
+    border-radius: 1.1vh;
+    background: #1e3041;
+    box-shadow: 0.4vh 0.4vh 0.4vh 0vh #131f2a inset;
+}
+#relic5 {
+    width: 5vw;
+    height: 10vh;
+    border-radius: 1.1vh;
+    background: #1e3041;
+    box-shadow: 0.4vh 0.4vh 0.4vh 0vh #131f2a inset;
+}
+
+img.relic {
+    width: 5vw;
+    height: 10vh;
+}
+
+/* img.relic1 {
+    width: 5vw;
+    height: 10vh;
+    display: none;
+} */
 
 .upgrade_reroll_box {
     width: 45vw;
@@ -71,6 +128,28 @@ body {
     border-radius: 2.1vh;
     background: #727272;
     box-shadow: 1.0vh 1.0vh 0.4vh 0vh rgba(0, 0, 0, 0.56);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#upgrade_box_text {
+    font-size: 4vh;
+    margin-bottom: 2vh;
+}
+
+#upgrade_box_button {
+    width: 10vw;
+    height: 7vh;
+    border-radius: 1.4vh;
+    background: #F1E14E;
+    box-shadow: 0vh 0.7vh 0.4vh 0vh rgba(0, 0, 0, 0.50);
+    color: #000;
+    font-size: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .reroll_box {
@@ -79,6 +158,43 @@ body {
     border-radius: 2.1vh;
     background: #727272;
     box-shadow: 1.0vh 1.0vh 0.4vh 0vh rgba(0, 0, 0, 0.56);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#reroll_box_button {
+    width: 10vw;
+    height: 7vh;
+    border-radius: 1.4vh;
+    background: #3CA9CC;
+    box-shadow: 0vh 0.7vh 0.4vh 0vh rgba(0, 0, 0, 0.50);
+    color: #000;
+    font-size: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#relic_buy_box1 {
+    width: 7vw;
+    height: 17vh;
+    color: #CFBC11;
+    font-size: 4vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+#relic_buy_box2 {
+    width: 7vw;
+    height: 17vh;
+    color: #CFBC11;
+    font-size: 4vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .blockshop_button_box {
@@ -96,6 +212,29 @@ body {
     border-radius: 2.1vh;
     background: #727272;
     box-shadow: 1.0vh 1.0vh 0.4vh 0vh rgba(0, 0, 0, 0.56);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#block_buy_box {
+    width: 7vw;
+    height: 17vh;
+    color: #CFBC11;
+    font-size: 4vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+img.block_yellow {
+    width: 5vw;
+    height: 10vh;
+}
+img.block_other {
+    width: 5vw;
+    height: 15vh;
 }
 
 .button_box {

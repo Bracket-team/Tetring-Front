@@ -23,6 +23,7 @@ function gameOver() {
   // 점수 표시 업데이트
   updateScore();
   updateFinalScore();
+  location.href = "../shop/shop.html"
 
   // 이 밑에 있는 부분은 유물 효과로 게임을 다시 시작할 시 실행시키면 됨. 물론 위에 isGameOver는 true하면 안됨 if문으로 분기 나눠서 하면됨
   //   // 게임 보드를 0으로 초기화
@@ -160,7 +161,7 @@ function initPieces() {
     ],
   ];
   for (let i = 0; i < basicBlock.length; i++) {
-    for (let j = 0; j < 7; j++) {
+    for (let j = 0; j < 5; j++) {
       addPiece(basicBlock[i]);
     }
   }

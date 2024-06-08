@@ -14,19 +14,28 @@
         </div>
         <div class="background">
             <div class="relic_box">
-
+                <div id="relic1"><img src="../img/block1.png" class="relic"></div>
+                <div id="relic2"><img src="../img/block2.png" class="relic"></div>
+                <div id="relic3"></div>
+                <div id="relic4"></div>
+                <div id="relic5"></div>
             </div>
             <div class="upgrade_reroll_box">
                 <div class="upgrade_box">
-
+                    <div id="upgrade_box_text">머니 레벨 0</div>
+                    <div id="upgrade_box_button">업그레이드</div>
                 </div>
                 <div class="reroll_box">
-
+                    <div id="reroll_box_button">리롤 2$</div>
+                    <div id="relic_buy_box1"><img src="../img/T-relic.png" class="relic">10$</div>
+                    <div id="relic_buy_box2"><img src="../img/combo-relic.png" class="relic">10$</div>
                 </div>
             </div>
             <div class="blockshop_button_box">
                 <div class="blockshop_box">
-
+                    <div id="block_buy_box"><img src="../img/yellowblock.png" class="block_yellow">5$</div>
+                    <div id="block_buy_box"><img src="../img/orangeblock.png" class="block_other">5$</div>
+                    <div id="block_buy_box"><img src="../img/pupleblock.png" class="block_other">5$</div>
                 </div>
                 <div class="button_box">
                     <div class="block_button">
@@ -38,5 +47,22 @@
                 </div>
             </div>
         </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const relicBuyBox = document.querySelector('#relic_buy_box1');
+                const relicBoxtemp = document.querySelector('.relic_box')
+                const relicBox = document.querySelector('#relic3');
+                const goldDiv = document.querySelector('#gold');
+
+                relicBuyBox.addEventListener('click', function() {
+                    const newRelicDiv = document.createElement('div');
+                    newRelicDiv.id = 'relic3';
+                    newRelicDiv.innerHTML = '<img src="../img/T-relic.png" class="relic">';
+                    relicBoxtemp.replaceChild(newRelicDiv,relicBox);
+                    relicBuyBox.style.display = 'none'
+                    goldDiv.textContent = '보유 금액 : 0$';
+                });
+            });
+        </script>
     </body>
 </html>
