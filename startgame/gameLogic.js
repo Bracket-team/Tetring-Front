@@ -158,3 +158,24 @@ function loadNewBlock() {
     gameOver();
   }
 }
+
+function addGreyRow() {
+  const width = 12; // 가로 칸 수
+  const emptyPosition = Math.floor(Math.random() * width); // 무작위로 비어있을 칸 선택
+  const newRow = new Array(width).fill(8); // 새로운 회색 줄 생성
+  newRow[emptyPosition] = 0; // 선택된 위치는 비어있게 설정
+
+  area.push(newRow); // 새로운 회색 줄을 가장 밑에 추가
+
+  // 추가적으로, area의 크기가 게임 보드의 높이를 초과하지 않도록 조정
+  if (area.length > 20) {
+    // 가장 위의 줄에 0 초과인 값이 있는지 확인
+    const topRow = area[0];
+    const hasBlock = topRow.some((value) => value > 0);
+
+    if (hasBlock) {
+      gameOver();
+    }
+    area.shift(); // 가장 위의 줄을 제거하여 크기 조정
+  }
+}

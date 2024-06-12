@@ -22,6 +22,11 @@ class Artifact {
 
 const artifacts = [];
 
+/*
+API 통신 부분
+유물에 대한 정보들은 백엔드에서 가져옴
+avaliableArtifacts 리스트는 나중에 필요없는 리스트임
+*/
 const availableArtifacts = [
   new Artifact(
     1,
@@ -176,6 +181,11 @@ const availableArtifacts = [
   ),
 ];
 
+/*
+API 통신 부분
+유물 획득은 백엔드에 요청을 보내면 살 수 있는지 여부와 유물에 대한 정보 제공
+그 정보를 Artifact 클래스에 담아서 artifacts 안에 넣으면 됨
+*/
 function acquireArtifact(artifactId) {
   const artifact = availableArtifacts.find(
     (artifact) => artifact.id === artifactId
@@ -185,15 +195,24 @@ function acquireArtifact(artifactId) {
   }
 }
 
+/*
+API 통신 부분
+*/
 function getArtifactById(id) {
   return artifacts.find((artifact) => artifact.id === id);
 }
 
+/*
+API 통신 부분
+*/
 // 유물의 보유 여부 확인 함수
 function checkArtifact(artifactId) {
   return artifacts.some((artifact) => artifact.id === artifactId);
 }
 
+/*
+API 통신 부분
+*/
 // 획득한 유물의 개수를 반환하는 함수
 function countAcquiredArtifacts() {
   return artifacts.length;

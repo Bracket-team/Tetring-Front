@@ -16,16 +16,40 @@ let breakBlockUses = 0;
 let isDoubleUp = false;
 let pieces = [];
 initPieces();
-shuffleArray(pieces);
 
-//나중에 추가해줘야 할 것 1. 유물 목록들 2. 블록들 3. 머니레벨 4. 머니
+//변수명 수정, 전역 변수 수정, 게임 재시작
 let moneyLevel = 3; //머니 레벨
 let money = 21;
-console.log(artifacts);
+
+let animationId;
+let dropCounter = 0;
+let dropInterval = 1500;
+let lastTime = 0;
+
+startGame();
+
+function startGame() {
+  loadNewBlock();
+  updateScore();
+  update();
+}
 
 function update(time = 0) {
+  if(isGameOver) {
+    cancelAnimationFrame(animationId);
+    return;
+  }
+
+  const deltaTime = time - lastTime;
+  lastTime = time;
+  dropCounter += deltaTime;
+
+  if(dropCounter > dropInterval) {
+    playerDrop();
+  }
+
   draw();
-  requestAnimationFrame(update);
+  animationId = requestAnimationFrame(update);
 }
 
 document.addEventListener("keydown", (event) => {
@@ -54,6 +78,3 @@ document.addEventListener("keydown", (event) => {
     }
   }
 });
-loadNewBlock();
-updateScore();
-update();

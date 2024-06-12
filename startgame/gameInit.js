@@ -23,7 +23,6 @@ function gameOver() {
   // 점수 표시 업데이트
   updateScore();
   updateFinalScore();
-  location.href = "../shop/shop.html"
 
   // 이 밑에 있는 부분은 유물 효과로 게임을 다시 시작할 시 실행시키면 됨. 물론 위에 isGameOver는 true하면 안됨 if문으로 분기 나눠서 하면됨
   //   // 게임 보드를 0으로 초기화
@@ -48,6 +47,18 @@ function gameOver() {
   //   hold = null;
 }
 
+/*
+블록의 모양을 조정하는 부분
+예를 들어
+0000
+0110
+0011
+0000
+다음과 같은 모양이 있으면 정사각형으로 압축해서 표현함
+110
+011
+000
+*/
 function trimAndSquareMatrix(matrix) {
   // 빈 가로줄 제거
   let trimmedMatrix = matrix.filter((row) => row.some((value) => value !== 0));
@@ -108,6 +119,12 @@ function deepCopyMatrix(matrix) {
   return matrix.map((row) => row.slice());
 }
 
+/*
+API 통신 부분
+현재는 각 블록을 n개 씩 추가하지만 API를 통해서
+플레이어가 가지고 있는 블록을 가져와서 추가해야 됨.
+블록 형태 가지고 있을 필요 없음.
+*/
 function initPieces() {
   const basicBlock = [
     // I 블록
@@ -118,6 +135,7 @@ function initPieces() {
       [0, 0, 0, 0],
     ],
     // J 블록
+    
     [
       [0, 0, 0, 0],
       [0, 2, 0, 0],
@@ -161,13 +179,11 @@ function initPieces() {
     ],
   ];
   for (let i = 0; i < basicBlock.length; i++) {
-    for (let j = 0; j < 5; j++) {
+    for (let j = 0; j < 7; j++) {
       addPiece(basicBlock[i]);
     }
   }
-  // for (let i = 0; i < 30; i++) {
-  //   addPiece(basicBlock[0]);
-  // }
+  shuffleArray(pieces);
 }
 
 function updateScore() {
@@ -181,6 +197,9 @@ function updateFinalScore() {
   );
 }
 
+/*
+블록 순서 섞기
+*/
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
